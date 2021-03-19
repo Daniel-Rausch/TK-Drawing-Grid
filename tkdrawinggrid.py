@@ -11,7 +11,6 @@ class TKDrawingGrid():
     DEFAULT_COLOR = (255,255,255)
 
     def __init__(self, width, height, scale, workerfunction, sleeptimeMS):
-        super (TKDrawingGrid, self).__init__()
 
         self.width = width
         self.height = height
