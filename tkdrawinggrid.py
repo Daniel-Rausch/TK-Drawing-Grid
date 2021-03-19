@@ -2,7 +2,6 @@ from tkinter import Tk, Canvas, PhotoImage, mainloop
 
 from PIL import Image, ImageDraw, ImageTk
 
-from threading import Thread
 from time import sleep
 from datetime import datetime
 
@@ -56,7 +55,7 @@ class TestWorker(object):
         self._i = 0
 
     def run(self, pane):
-        pane.pixels[self._i % pane.width][int(self._i) % pane.height] = (100 * (self._i%3), 100 * ((self._i+1)%3), 100 * ((self._i+2)%3))
+        pane.pixels[self._i % pane.width][self._i % pane.height] = (100 * (self._i%3), 100 * ((self._i+1)%3), 100 * ((self._i+2)%3))
         pane.update()
         #print(datetime.now())
         self._i += 1
