@@ -60,6 +60,6 @@ class TestWorker(object):
         #print(datetime.now())
         self._i += 1
 
-
-worker = TestWorker()
-myPane = TKDrawingGrid(100, 71, 10, worker.run, 0)
+if __name__ == "__main__":
+    worker = TestWorker()
+    TKDrawingGrid(100, 71, 10, worker.run, 0)
